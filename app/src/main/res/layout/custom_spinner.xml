@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="225dp"
+    android:layout_height="50dp"
+    android:padding="@dimen/main_padding">
+
+    <ImageView
+        android:id="@+id/flag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/poland_flag"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/currencyName"
+        android:layout_width="125dp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="польский злотый"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/extra_small_text_size"
+        />
+
+    <FrameLayout
+        android:id="@+id/wallet"
+        android:layout_width="3dp"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@+id/currencyName"
+        android:layout_marginEnd="5dp"
+        android:background="@color/colorBlack"
+        app:layout_constraintStart_toEndOf="@+id/currencyName"/>
+
+    <TextView
+        android:id="@+id/abbreviation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/wallet"
+        android:text="pln"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/extra_small_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

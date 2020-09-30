@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/main_item_margin"
+    android:paddingTop="@dimen/main_item_margin"
+    android:paddingStart="5dp"
+    android:paddingEnd="5dp"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/small_text_size"
+        android:text="1"
+        android:visibility="gone"
+        android:gravity="center"
+        android:layout_marginEnd="@dimen/main_item_margin"/>
+
+    <ImageView
+        android:id="@+id/flag1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/poland_flag"
+        android:layout_marginEnd="@dimen/main_item_margin"/>
+
+    <TextView
+        android:id="@+id/abbreviation1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PLN"
+        android:textSize="@dimen/main_text_size"
+        android:textColor="@color/colorBlack"
+        />
+
+    <ImageView
+        android:id="@+id/course"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/down"
+        android:layout_marginStart="@dimen/big_item_margin"
+        android:layout_marginEnd="@dimen/big_item_margin"/>
+
+    <ImageView
+        android:id="@+id/flag2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/euro_flag"
+        android:layout_marginEnd="@dimen/main_item_margin"/>
+
+    <TextView
+        android:id="@+id/abbreviation2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EUR"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/main_text_size"
+        />
+
+    <TextView
+        android:id="@+id/equals"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/main_text_size"
+        android:text="3.14"
+        android:gravity="center"
+        android:layout_marginStart="@dimen/big_item_margin"/>
+
+</LinearLayout>

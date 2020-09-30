@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Конвертация Валют</string>
+    <string name="title_home">Конвертация</string>
+    <string name="title_dashboard">Избранные</string>
+    <string name="title_notifications">Notifications</string>
+
+    <string name="favorites">Избранные</string>
+    <string name="convert">Конвертация</string>
+
+    <string name="currency_name_usd">Доллар</string>
+    <string name="currency_abbreviation_usd">USD</string>
+
+    <string name="currency_name_eur">Евро</string>
+    <string name="currency_abbreviation_eur">EUR</string>
+
+    <string name="currency_name_rub">Рубль</string>
+    <string name="currency_abbreviation_rub">RUB</string>
+
+    <string name="currency_name_pln">Злоты</string>
+    <string name="currency_abbreviation_pln">PLN</string>
+
+    <string name="currency_name_chf">Франк</string>
+    <string name="currency_abbreviation_chf">CHF</string>
+
+    <string name="currency_name_gbr">Фунт Стерлингов</string>
+    <string name="currency_abbreviation_gbr">GBP</string>
+
+    <string name="currency_name_byn">Белоруский рубль</string>
+    <string name="currency_abbreviation_byn">BYN</string>
+
+    <string name="errorInternetConnection">Отсутствует подключение к интернету</string>
+    <string name="havent_favorites">Нет избранных конвертаций</string>
+
+    <string name="emptyText">Пустой тектс</string>
+    <string name="try_again">Попробуй ещё раз</string>
+
+    <string name="dontNumber">Пустой тектс</string>
+</resources>

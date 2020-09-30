@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Currency Conversion</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <string name="favorites">favorites</string>
+    <string name="convert">convert</string>
+
+    <string name="currency_name_usd">Dollar</string>
+    <string name="currency_abbreviation_usd">USD</string>
+
+    <string name="currency_name_eur">Euro</string>
+    <string name="currency_abbreviation_eur">EUR</string>
+
+    <string name="currency_name_rub">Ruble</string>
+    <string name="currency_abbreviation_rub">RUB</string>
+
+    <string name="currency_name_pln">Zloty</string>
+    <string name="currency_abbreviation_pln">PLN</string>
+
+    <string name="currency_name_chf">Franc</string>
+    <string name="currency_abbreviation_chf">CHF</string>
+
+    <string name="currency_name_gbr">Pound sterling</string>
+    <string name="currency_abbreviation_gbr">GBP</string>
+
+    <string name="currency_name_byn">Belarusian ruble</string>
+    <string name="currency_abbreviation_byn">BYN</string>
+
+    <string name="errorInternetConnection">Error Internet Connection</string>
+    <string name="havent_favorites">sorry, but you haven\'t favorites</string>
+
+    <string name="emptyText">you didn\'t write anything</string>
+    <string name="try_again">try again</string>
+
+    <string name="dontNumber">You did not indicate the number</string>
+    <string name="cannotLoadInformation">Error, Cannot load information!</string>
+</resources>

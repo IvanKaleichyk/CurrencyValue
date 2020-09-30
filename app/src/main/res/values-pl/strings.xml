@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Przelicznik Walut</string>
+    <string name="title_home">konwertować</string>
+    <string name="title_dashboard">wybrani</string>
+    <string name="title_notifications">Notifications</string>
+
+    <string name="favorites">wybrani</string>
+    <string name="convert">konwertować</string>
+
+    <string name="currency_name_usd">Dolar</string>
+    <string name="currency_abbreviation_usd">USD</string>
+
+    <string name="currency_name_eur">Euro</string>
+    <string name="currency_abbreviation_eur">EUR</string>
+
+    <string name="currency_name_rub">Rubel</string>
+    <string name="currency_abbreviation_rub">RUB</string>
+
+    <string name="currency_name_pln">Złoty</string>
+    <string name="currency_abbreviation_pln">PLN</string>
+
+    <string name="currency_name_chf">Franc</string>
+    <string name="currency_abbreviation_chf">CHF</string>
+
+    <string name="currency_name_gbr">Funt szterling</string>
+    <string name="currency_abbreviation_gbr">GBP</string>
+
+    <string name="currency_name_byn">Białoruski Rubel</string>
+    <string name="currency_abbreviation_byn">BYN</string>
+
+    <string name="errorInternetConnection">Nie ma połączenia z Internetem</string>
+    <string name="havent_favorites">Nie ma wybranych walut</string>
+
+    <string name="emptyText">Nie ma wartości</string>
+    <string name="try_again">Spróbuj jeszcze raz</string>
+
+    <string name="dontNumber">Nie ma wartości</string>
+</resources>
