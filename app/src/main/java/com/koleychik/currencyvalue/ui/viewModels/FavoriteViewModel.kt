@@ -7,6 +7,4 @@ import com.koleychik.currencyvalue.ui.state.FavoriteState
 class FavoriteViewModel : ViewModel() {
 
     val state = MutableLiveData<FavoriteState>(FavoriteState.Loading)
-
-    val mainSetWithId = MutableLiveData<MutableSet<String>>()
 }

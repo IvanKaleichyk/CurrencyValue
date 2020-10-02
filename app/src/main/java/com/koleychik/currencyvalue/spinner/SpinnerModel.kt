@@ -3,15 +3,12 @@ package com.koleychik.currencyvalue.spinner
 import com.koleychik.currencyvalue.R
 
 
-class SpinnerModel{
+class SpinnerModel(var img: Int) {
 
     var name = 0
     var abbreviation = 0
 
-    var img  = 0
-
-    constructor(img : Int){
-        this.img = img
+    init {
         when (img){
             R.drawable.usa_flag -> {
                 name = R.string.currency_name_usd
@@ -43,11 +40,4 @@ class SpinnerModel{
             }
         }
     }
-
-//    public fun getCurrencyName() = name
-//
-//    public fun getAbbreviationName() = abbreviation
-//
-//    public fun getFlag() = img
-
 }

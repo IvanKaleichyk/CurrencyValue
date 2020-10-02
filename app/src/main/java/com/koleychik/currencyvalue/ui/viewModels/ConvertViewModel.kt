@@ -26,8 +26,7 @@ class ConvertViewModel : ViewModel() {
         val builder = StringBuilder()
 
         val masWithPoint = str.split(".").toMutableList()
-//    var mas = str.toCharArray()
-//    mas = mas.reversedArray()
+
         var mas = masWithPoint[0].toCharArray()
         mas = mas.reversedArray()
         var num = 0
@@ -62,7 +61,6 @@ class ConvertViewModel : ViewModel() {
 
     fun clickOnKeyBoard(): Boolean {
         keys++
-//        Toast.makeText(context, keys.toString(), Toast.LENGTH_SHORT).show()
         if (keys - 3 == 1) {
             keys = 0
             return true
@@ -81,12 +79,4 @@ class ConvertViewModel : ViewModel() {
         arrayList.add(SpinnerModel(R.drawable.belarusian_flag))
         return arrayList
     }
-
-//    fun haveFavorite(nameFirst: String, nameSecond: String): Boolean{
-//        if (repositoryFavorites.checkIfHave(nameFirst, nameSecond) == null){
-//            return false
-//        }
-//        return true
-//    }
-
 }

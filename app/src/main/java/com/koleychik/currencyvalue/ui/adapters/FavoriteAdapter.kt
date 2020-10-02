@@ -65,36 +65,20 @@ class FavoriteAdapter : RecyclerView.Adapter<FavoriteAdapter.MainViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: MainViewHolder, position: Int) {
-        holder.bind(model = list[position], position)
+        holder.bind(model = list[position])
     }
 
     override fun getItemCount(): Int = list.size()
 
     class MainViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
 
-        fun bind(model : Favorites, position: Int){
-//            itemView.number.text = position.toString()
+        fun bind(model : Favorites){
             itemView.flag1.setImageResource(GetAbbreviationAndName.getFlag(model.nameFirst))
             itemView.flag2.setImageResource(GetAbbreviationAndName.getFlag(model.nameSecond))
             itemView.abbreviation1.setText(GetAbbreviationAndName.getAbbreviation(model.nameFirst))
             itemView.abbreviation2.setText(GetAbbreviationAndName.getAbbreviation(model.nameSecond))
             itemView.equals.text = model.valueToday.toString()
             itemView.course.setImageResource(R.drawable.equals)
-
-//            when {
-//                model.valueLastDay == 0F ->{
-//                    itemView.course.setImageResource(R.drawable.equals)
-//                }
-//                model.valueLastDay - model.valueToday > 0 -> {
-//                    itemView.course.setImageResource(R.drawable.down)
-//                }
-//                model.valueLastDay == model.valueToday -> {
-//                    itemView.course.setImageResource(R.drawable.equals)
-//                }
-//                else -> {
-//                    itemView.course.setImageResource(R.drawable.up)
-//                }
-//            }
         }
 
     }

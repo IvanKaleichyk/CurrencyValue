@@ -33,7 +33,7 @@ public class ParsingUkrBank {
             return;
         }
 
-        Element main = getMainElement(document, "table-auto");
+        Element main = getMainElement(document);
 
         Elements currencies_items = getElements(main, "row--collapse");
 
@@ -76,10 +76,10 @@ public class ParsingUkrBank {
 
     private Currencies getBelarusianCurrencies(Element element) {
         Element el = element.getElementsByClass("row--collapse").get(3);
-        return new Currencies(getName(el, "/currency/nbu/byn/"), getValue(el, "data-title"));
+        return new Currencies(getName(el), getValue(el, "data-title"));
     }
 
-    private String getName(Element element, String hrefName) {
+    private String getName(Element element) {
         return element.select("a").text();
     }
 
@@ -134,7 +134,7 @@ public class ParsingUkrBank {
         return element.getElementsByClass(class_name);
     }
 
-    private Element getMainElement(Document document, String class_name) {
+    private Element getMainElement(Document document) {
         return document.getElementsByClass("table-auto").get(0);
     }
 

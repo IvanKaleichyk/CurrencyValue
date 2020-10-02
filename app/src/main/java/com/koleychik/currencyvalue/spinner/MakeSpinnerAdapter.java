@@ -28,16 +28,16 @@ public class MakeSpinnerAdapter extends ArrayAdapter<SpinnerModel> {
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        return initView(position, convertView, parent);
+        return initView(position, parent);
     }
 
     @Override
     public View getDropDownView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        return initView(position, convertView, parent);
+        return initView(position, parent);
     }
 
-    private View initView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        convertView = LayoutInflater.from(getContext()).inflate(R.layout.custom_spinner, parent, false);
+    private View initView(int position, @NonNull ViewGroup parent) {
+        View convertView = LayoutInflater.from(getContext()).inflate(R.layout.custom_spinner, parent, false);
 
         ImageView flag = convertView.findViewById(R.id.flag);
         TextView name = convertView.findViewById(R.id.currencyName);

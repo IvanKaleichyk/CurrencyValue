@@ -17,7 +17,6 @@ class ViewPagerFragment : Fragment() {
 
     private lateinit var root: View
 
-//    private var select = 0
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

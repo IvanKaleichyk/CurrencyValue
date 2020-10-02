@@ -12,7 +12,6 @@ import java.util.ArrayList
 
 class MainActivity : AppCompatActivity() {
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -41,9 +40,5 @@ class MainActivity : AppCompatActivity() {
         Log.d(Keys.APP, "start save")
 
         sharedPreferenceUtils.saveToSPrefListFavorites(MainSingleton.getMainSingleton().listFavorite)
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
     }
 }
