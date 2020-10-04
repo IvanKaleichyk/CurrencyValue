@@ -35,7 +35,7 @@ class ViewPagerFragment : Fragment() {
     private fun makeViewPager() {
         val adapter = ViewPagerAdapter(
             list = getListFragment(),
-            fm = requireActivity().supportFragmentManager,
+            fm = childFragmentManager,
             lifecycle = lifecycle
         )
 

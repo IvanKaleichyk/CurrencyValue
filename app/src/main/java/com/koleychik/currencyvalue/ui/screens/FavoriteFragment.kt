@@ -17,6 +17,7 @@ import com.koleychik.currencyvalue.model.Favorites
 import com.koleychik.currencyvalue.ui.adapters.FavoriteAdapter
 import com.koleychik.currencyvalue.ui.state.FavoriteState
 import com.koleychik.currencyvalue.ui.viewModels.FavoriteViewModel
+import kotlinx.android.synthetic.main.fragment_favorite.*
 import kotlinx.android.synthetic.main.fragment_favorite.view.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -45,15 +46,20 @@ class FavoriteFragment : Fragment() {
         makeRv()
         subscribe()
 
+        root.swipeToRefresh.setOnRefreshListener {
+            swipeToRefresh.isRefreshing = true
+            getList()
+        }
+
         return root
     }
 
-    private fun subscribe(){
-        viewModel.state.observe(viewLifecycleOwner, {render(it)})
+    private fun subscribe() {
+        viewModel.state.observe(viewLifecycleOwner, { render(it) })
     }
 
-    private fun render(state : FavoriteState){
-        when(state){
+    private fun render(state: FavoriteState) {
+        when (state) {
             is FavoriteState.Loading -> {
                 root.rv.visibility = View.GONE
                 root.text_havent_favorites.visibility = View.GONE
@@ -75,12 +81,15 @@ class FavoriteFragment : Fragment() {
         }
     }
 
-    private fun getList() = CoroutineScope(Dispatchers.IO).launch {
+    private fun getList(isRefreshing: Boolean = false) = CoroutineScope(Dispatchers.IO).launch {
+
+        Log.d(Keys.APP, "getList")
+
         val listFavoritesId = MainSingleton.getMainSingleton().listFavorite
         val listCurrency = MainSingleton.getMainSingleton().list
 
         val listFavorite = mutableListOf<Favorites>()
-        for (i in listFavoritesId){
+        for (i in listFavoritesId) {
             Log.d(Keys.APP, "listFavoritesId i = $i")
             val id1 = i[0].toString().toInt()
             Log.d(Keys.APP, "id1 = $id1")
@@ -90,25 +99,31 @@ class FavoriteFragment : Fragment() {
             listFavorite.add(createFavorite(listCurrency[id1], listCurrency[id2], i))
         }
 
-        withContext(Dispatchers.Main){
-            if (listFavorite.isEmpty()){
+        withContext(Dispatchers.Main) {
+//            if ()
+            if (listFavorite.isEmpty()) {
                 viewModel.state.value = FavoriteState.NothingInDb
-            }
-            else {
+            } else {
                 viewModel.state.value = FavoriteState.Show(listFavorite)
             }
+            root.swipeToRefresh.isRefreshing = false
         }
     }
 
-    private fun createFavorite(currency1: Currencies, currency2: Currencies, id : String) = Favorites(
-        id.toInt(),
-        nameFirst = currency1.Name,
-        nameSecond = currency2.Name,
-        valueLastDay = sharedPreferenceUtils.getFloat(id),
-        valueToday = Convert.convert(BigDecimal(1), BigDecimal(currency1.value), BigDecimal(currency2.value)).toFloat()
-    )
+    private fun createFavorite(currency1: Currencies, currency2: Currencies, id: String) =
+        Favorites(
+            id.toInt(),
+            nameFirst = currency1.Name,
+            nameSecond = currency2.Name,
+            valueLastDay = sharedPreferenceUtils.getFloat(id),
+            valueToday = Convert.convert(
+                BigDecimal(1),
+                BigDecimal(currency1.value),
+                BigDecimal(currency2.value)
+            ).toFloat()
+        )
 
-    private fun makeRv(){
+    private fun makeRv() {
         root.rv.adapter = adapter
     }
 
