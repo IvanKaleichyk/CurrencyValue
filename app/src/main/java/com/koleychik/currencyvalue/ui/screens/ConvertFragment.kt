@@ -36,6 +36,8 @@ class ConvertFragment : Fragment() {
 
     private val mainSingleton = MainSingleton.getMainSingleton()
 
+    private lateinit var sharedPreferenceUtils : SharedPreferenceUtils
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -43,6 +45,7 @@ class ConvertFragment : Fragment() {
     ): View? {
         root = inflater.inflate(R.layout.fragment_convert, container, false)
         viewModel = ViewModelProvider(this)[ConvertViewModel::class.java]
+        sharedPreferenceUtils = SharedPreferenceUtils(root.context)
 
         Log.d(Keys.APP, "Start Convert Fragment")
 
@@ -204,6 +207,10 @@ class ConvertFragment : Fragment() {
             ) {
                 root.number2.text = ""
 
+                if (position == viewModel.number2.value){
+                    viewModel.number2.value = viewModel.number1.value
+                }
+
                 viewModel.number1.value = position
                 viewModel.isFavorite.value = checkIfInListFavorite(
                     num1,
@@ -225,6 +232,9 @@ class ConvertFragment : Fragment() {
             ) {
                 root.number2.text = ""
 
+                if (position == viewModel.number1.value){
+                    viewModel.number1.value = viewModel.number2.value
+                }
                 viewModel.number2.value = position
                 viewModel.isFavorite.value = checkIfInListFavorite(
                     num1,
@@ -249,4 +259,15 @@ class ConvertFragment : Fragment() {
         }
     }
 
+    override fun onStop() {
+        super.onStop()
+        sharedPreferenceUtils.saveLastValueNumber("1", viewModel.number1.value!!)
+        sharedPreferenceUtils.saveLastValueNumber("2", viewModel.number2.value!!)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        viewModel.number1.value = sharedPreferenceUtils.getLastValueNumber("1", viewModel.number1.value!!)
+        viewModel.number2.value = sharedPreferenceUtils.getLastValueNumber("2", viewModel.number2.value!!)
+    }
 }

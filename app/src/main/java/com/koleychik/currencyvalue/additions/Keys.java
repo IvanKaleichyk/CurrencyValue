@@ -6,5 +6,6 @@ public class Keys {
 //    SHARED PREFERENCE
     public static String MAIN_SPREF = "MAIN_SPREF";
     public static String LIST_FAVORITES = "LIST_FAVORITES";
+    public static String LAST_NUMBER = "LAST_NUMBER";
 
 }

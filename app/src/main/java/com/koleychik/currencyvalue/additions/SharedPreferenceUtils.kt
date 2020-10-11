@@ -31,4 +31,12 @@ class SharedPreferenceUtils(private val context: Context) {
 
     fun getFloat(keys: String) = sPref.getFloat(keys, 0F)
 
+    fun getLastValueNumber(number: String, defValue : Int) = sPref.getInt(Keys.LAST_NUMBER + number, defValue)
+
+    fun saveLastValueNumber(number: String, value: Int){
+        val editor = sPref.edit()
+        editor.putInt(Keys.LAST_NUMBER + number, value)
+        editor.apply()
+    }
+
 }
