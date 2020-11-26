@@ -35,4 +35,5 @@
     <string name="try_again">Попробуй ещё раз</string>
 
     <string name="dontNumber">Пустой тектс</string>
+    <string name="cannotLoadInformation">Ошибка, приложение не может загрузить информацию!</string>
 </resources>

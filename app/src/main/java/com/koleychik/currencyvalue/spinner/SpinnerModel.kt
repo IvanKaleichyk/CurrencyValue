@@ -34,10 +34,10 @@ class SpinnerModel(var img: Int) {
                 name = R.string.currency_name_gbr
                 abbreviation = R.string.currency_abbreviation_gbr
             }
-            R.drawable.belarusian_flag ->{
-                name = R.string.currency_name_byn
-                abbreviation = R.string.currency_abbreviation_byn
-            }
+//            R.drawable.belarusian_flag ->{
+//                name = R.string.currency_name_byn
+//                abbreviation = R.string.currency_abbreviation_byn
+//            }
         }
     }
 }

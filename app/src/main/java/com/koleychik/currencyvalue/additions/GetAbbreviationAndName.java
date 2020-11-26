@@ -43,6 +43,6 @@ public class GetAbbreviationAndName {
             case "БЕЛОРУССКИЙ РУБЛЬ  БЕЛОРУССКИЙ РУБЛЬ":
                 return R.drawable.belarusian_flag;
         }
-        return R.string.currency_abbreviation_usd;
+        return R.drawable.usa_flag;
     }
 }

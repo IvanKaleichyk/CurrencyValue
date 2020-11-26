@@ -40,7 +40,7 @@ public class ParsingUkrBank {
         list = getItemsList(currencies_items);
         currenciesList = getItemsCurrenciesList(currencies_items);
 
-        addAdditionToList(document);
+//        addAdditionToList(document);
 
         currenciesList = makeRight(currenciesList);
 

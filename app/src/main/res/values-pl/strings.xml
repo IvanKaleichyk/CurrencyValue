@@ -35,4 +35,5 @@
     <string name="try_again">Spróbuj jeszcze raz</string>
 
     <string name="dontNumber">Nie ma wartości</string>
+    <string name="cannotLoadInformation">Błąd, nie można załadować informacji!</string>
 </resources>

@@ -1,5 +1,6 @@
 package com.koleychik.currencyvalue.ui.adapters
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,6 +9,7 @@ import androidx.recyclerview.widget.SortedList
 import androidx.recyclerview.widget.SortedListAdapterCallback
 import com.koleychik.currencyvalue.R
 import com.koleychik.currencyvalue.additions.GetAbbreviationAndName
+import com.koleychik.currencyvalue.additions.Keys
 import com.koleychik.currencyvalue.model.Favorites
 import kotlinx.android.synthetic.main.item_rv.view.*
 
@@ -73,6 +75,7 @@ class FavoriteAdapter : RecyclerView.Adapter<FavoriteAdapter.MainViewHolder>() {
     class MainViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
 
         fun bind(model : Favorites){
+            Log.d(Keys.APP, "model.nameSecond = ${model.nameSecond}")
             itemView.flag1.setImageResource(GetAbbreviationAndName.getFlag(model.nameFirst))
             itemView.flag2.setImageResource(GetAbbreviationAndName.getFlag(model.nameSecond))
             itemView.abbreviation1.setText(GetAbbreviationAndName.getAbbreviation(model.nameFirst))

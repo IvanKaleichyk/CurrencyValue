@@ -76,7 +76,7 @@ class ConvertViewModel : ViewModel() {
         arrayList.add(SpinnerModel(R.drawable.poland_flag))
         arrayList.add(SpinnerModel(R.drawable.switzerland_flag))
         arrayList.add(SpinnerModel(R.drawable.uk_flag))
-        arrayList.add(SpinnerModel(R.drawable.belarusian_flag))
+//        arrayList.add(SpinnerModel(R.drawable.belarusian_flag))
         return arrayList
     }
 }
